@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mExpress"
+        android:title="快递代取" />
+    <item
+        android:id="@+id/mBuy"
+        android:title="代购" />
+    <item
+        android:id="@+id/mRun"
+        android:title="代跑腿" />
+    <item
+        android:id="@+id/mEat"
+        android:title="代取餐" />
+</menu>

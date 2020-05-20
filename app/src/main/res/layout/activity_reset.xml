@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="#FFFFFF"
+                                                   android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/mPro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重置密码"
+        android:textSize="30sp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/mUserName"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:hint="请输入用户名"
+        android:inputType="text"
+        android:maxLength="16"
+        android:paddingStart="70dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="用户名:"
+        app:layout_constraintBottom_toBottomOf="@+id/mUserName"
+        app:layout_constraintStart_toStartOf="@+id/mUserName"
+        app:layout_constraintTop_toTopOf="@+id/mUserName" />
+
+
+    <EditText
+        android:id="@+id/mPassword"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:hint="请输入8到16位密码"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:paddingStart="70dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/mUserName"
+        app:layout_constraintStart_toStartOf="@+id/mUserName"
+        app:layout_constraintTop_toBottomOf="@id/mUserName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="密码:"
+        app:layout_constraintBottom_toBottomOf="@+id/mPassword"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/mPassword"
+        app:layout_constraintTop_toTopOf="@+id/mPassword" />
+
+
+
+    <EditText
+        android:id="@+id/mPhone"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingStart="70dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/mPassword"
+        app:layout_constraintStart_toStartOf="@+id/mPassword"
+        app:layout_constraintTop_toBottomOf="@id/mPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="手机号:"
+        app:layout_constraintBottom_toBottomOf="@+id/mPhone"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/mPhone"
+        app:layout_constraintTop_toTopOf="@+id/mPhone" />
+
+    <Button
+        android:id="@+id/mReset"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="268dp"
+        android:background="@drawable/shape_radius"
+        android:text="立即修改"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

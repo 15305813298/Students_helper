@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mHome"
+        android:checked="true"
+        android:icon="@drawable/ic_home_light"
+        android:title="首页" />
+    <item
+        android:id="@+id/nav_career"
+        android:icon="@drawable/ic_activity"
+        android:title="权宜帮" />
+    <item
+        android:id="@+id/mPost"
+        android:icon="@drawable/ic_message"
+        android:title="我要说" />
+    <item
+        android:id="@+id/nav_letter"
+        android:icon="@drawable/ic_people"
+        android:title="我的" />
+</menu>
