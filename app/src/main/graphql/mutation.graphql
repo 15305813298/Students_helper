@@ -1,0 +1,65 @@
+mutation createPost($postInput :PostInput!){
+    createPost(postInput:$postInput)
+}
+
+mutation changeCity($city :String!){
+    changeCity(city:$city)
+}
+
+mutation createAddress($description :String!){
+    createAddress(description :$description)
+}
+
+mutation setDefaultAddress($id : Int!){
+    setDefaultAddress(id:$id)
+}
+
+mutation register($createUserInput : CreateUserInput!){
+    register(createUserInput :$createUserInput){
+        id
+        token
+    }
+}
+
+mutation login($loginInput :LoginInput!){
+    login(loginInput:$loginInput){
+        id
+        token
+    }
+}
+
+mutation feedback($content :String!){
+    createFeedback(content :$content)
+}
+
+mutation changeAvatar($avatar :String!){
+    changeAvatar(avatar:$avatar)
+}
+
+mutation changeName($name :String!){
+    changeName(name:$name)
+}
+
+mutation createOrder($orderInput : OrderInput!){
+    createOrder(orderInput :$orderInput)
+}
+
+mutation pickOrder($id : Int!){
+    pickOrder(id : $id)
+}
+
+mutation createComment($commentInput :CommentInput!){
+    createComment(commentInput:$commentInput)
+}
+
+mutation orderSuccess($id:Int!,$code:String!){
+    orderSuccess(id:$id,code:$code)
+}
+
+mutation addBalance($money : Int!){
+    addBalance(money : $money)
+}
+
+mutation resetPassword($forgotPasswordInput :ForgotPasswordInput!){
+    resetPassword(forgotPasswordInput : $forgotPasswordInput)
+}

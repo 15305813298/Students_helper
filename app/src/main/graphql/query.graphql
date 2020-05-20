@@ -1,0 +1,224 @@
+query schools($filter :String!){
+    schools(filter:$filter){
+        id
+        name
+    }
+}
+
+query userInfo($id :Int){
+    userInfo(id :$id){
+        id
+        userName
+        nickName
+        balance
+        avatar
+        studentId
+        city
+        school{
+            id
+            name
+        }
+    }
+}
+
+query address($id:Int){
+    address(id:$id){
+        id
+        description
+    }
+}
+
+query school{
+    school{
+        id
+        name
+    }
+}
+
+query orders($page :Int!){
+    orders(page:$page){
+        id
+        postUser{
+            id
+            userName
+            nickName
+            avatar
+        }
+        pickUser{
+            id
+            userName
+            nickName
+            avatar
+        }
+        status
+        type
+        successCode
+        expressCode
+        expressName
+        pickAddress
+        address{
+            id
+            description
+        }
+        school{
+            id
+            name
+        }
+        description
+        offer
+        createdAt
+    }
+    hasPick
+}
+
+query ordersByUser($page :Int!){
+    ordersByUser(page:$page){
+        id
+        postUser{
+            id
+            userName
+            nickName
+            avatar
+        }
+        pickUser{
+            id
+            userName
+            nickName
+            avatar
+        }
+        status
+        type
+        successCode
+        expressCode
+        expressName
+        pickAddress
+        address{
+            id
+            description
+        }
+        school{
+            id
+            name
+        }
+        description
+        offer
+        createdAt
+    }
+}
+
+query posts($page :Int!,$filter :String!){
+    posts(page:$page,filter:$filter){
+        id
+        user{
+            id
+            userName
+            nickName
+            avatar
+        }
+        title
+        image
+        content
+        countComment
+        countView
+        createdAt
+    }
+}
+
+query post($id:Int!,$page:Int!){
+    post(id:$id){
+        id
+        user{
+            id
+            avatar
+            nickName
+            userName
+        }
+        title
+        content
+        image
+        countComment
+        countView
+        createdAt
+    }
+    commentByPost(id:$id,page:$page){
+        id
+        user{
+            id
+            avatar
+            nickName
+            userName
+        }
+        content
+        comment{
+            id
+            user{
+                id
+                userName
+                nickName
+            }
+            content
+        }
+        createdAt
+    }
+}
+
+query comments($id:Int!,$page:Int!){
+    commentByPost(id:$id,page:$page){
+        id
+        user{
+            id
+            avatar
+            nickName
+            userName
+        }
+        content
+        comment{
+            id
+            user{
+                id
+                userName
+                nickName
+            }
+            content
+        }
+        createdAt
+    }
+}
+
+query message($page :Int!){
+    messages(page:$page){
+        id
+        type
+        content
+        createdAt
+    }
+}
+
+query commentsByUser($page :Int!){
+    commentByUser(page:$page){
+        id
+        user{
+            id
+            userName
+            nickName
+            avatar
+        }
+        content
+        comment{
+            id
+            content
+            user{
+                id
+                userName
+                nickName
+                avatar
+            }
+            createdAt
+        }
+        createdAt
+        post{
+            id
+            title
+        }
+    }
+}
